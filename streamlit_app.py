@@ -15,13 +15,10 @@ def reset_app():
 
 # Main app
 if not st.session_state.prediction_done:
-    st.title("🎈 My new app")
-    st.write(
-        "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-    )
+    st.title("NYC Taxi Analysis App🚖")
 
+    st.header("Please enter the inputs below")
     # Borough and location handling
-    st.header("Select Location")
     borough = st.selectbox("Select a Borough", ["Bronx", "Manhattan", "Brooklyn", "Queens", "Staten Island", "Unknown"])
     transaction_month = st.selectbox("Enter the month", list(range(1, 13)))
     transaction_day = st.selectbox("Enter the day", list(range(1, 32)))
